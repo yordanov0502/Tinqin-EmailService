@@ -1,0 +1,6 @@
+package com.tinqinacademy.emailservice.api.operations.sendcodeforemailverification;
+
+import com.tinqinacademy.emailservice.api.base.OperationProcessor;
+
+public interface SendCodeForEmailVerificationOperation extends OperationProcessor<SendCodeForEmailVerificationInput,SendCodeForEmailVerificationOutput> {
+}
