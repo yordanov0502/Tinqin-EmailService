@@ -38,6 +38,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.tinqinacademy.email-service</groupId>
+            <artifactId>kafka</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
 

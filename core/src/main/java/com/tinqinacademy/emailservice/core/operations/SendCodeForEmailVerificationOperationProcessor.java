@@ -71,7 +71,4 @@ public class SendCodeForEmailVerificationOperationProcessor extends BaseOperatio
                 .mapLeft(exceptionService::handle);
     }
 
-
-
-
 }
