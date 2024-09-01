@@ -26,18 +26,18 @@ public class InternalController extends BaseController {
     private final SendCodeForEmailVerificationOperation sendCodeForEmailVerificationOperation;
     private final SendPassRecoveryCodeOperation sendPassRecoveryCodeOperation;
 
-    @Operation(summary = "Send one time code for email verification.",
-            description = "Sends one time code for email verification when a user has performed a registration.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "One time code for email verification sent successfully."),
-            @ApiResponse(responseCode = "400", description = "Bad request."),
-            @ApiResponse(responseCode = "404", description = "Not found.")
-    })
-    @PostMapping(RestApiRoutes.SEND_CODE_FOR_EMAIL_VERIFICATION)
-    public ResponseEntity<?> sendCodeForEmailVerification(@RequestBody SendCodeForEmailVerificationInput input) {
-        Either<Errors, SendCodeForEmailVerificationOutput> either = sendCodeForEmailVerificationOperation.process(input);
-        return mapToResponseEntity(either, HttpStatus.OK);
-    }
+//    @Operation(summary = "Send one time code for email verification.",
+//            description = "Sends one time code for email verification when a user has performed a registration.")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "One time code for email verification sent successfully."),
+//            @ApiResponse(responseCode = "400", description = "Bad request."),
+//            @ApiResponse(responseCode = "404", description = "Not found.")
+//    })
+//    @PostMapping(RestApiRoutes.SEND_CODE_FOR_EMAIL_VERIFICATION)
+//    public ResponseEntity<?> sendCodeForEmailVerification(@RequestBody SendCodeForEmailVerificationInput input) {
+//        Either<Errors, SendCodeForEmailVerificationOutput> either = sendCodeForEmailVerificationOperation.process(input);
+//        return mapToResponseEntity(either, HttpStatus.OK);
+//    }
 
     @Operation(summary = "Send email with password recovery code.",
             description = "Sends email with password recovery code, which is valid only for 5 mins. After that it expires.")

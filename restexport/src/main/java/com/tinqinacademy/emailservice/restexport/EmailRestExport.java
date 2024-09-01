@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 @Headers({"Content-Type: application/json"})
 public interface EmailRestExport {
 
-    @RequestLine("POST " + RestApiRoutes.SEND_CODE_FOR_EMAIL_VERIFICATION)
-    SendCodeForEmailVerificationOutput sendCodeForEmailVerification(@RequestBody SendCodeForEmailVerificationInput input);
+//    @RequestLine("POST " + RestApiRoutes.SEND_CODE_FOR_EMAIL_VERIFICATION)
+//    SendCodeForEmailVerificationOutput sendCodeForEmailVerification(@RequestBody SendCodeForEmailVerificationInput input);
 
     @RequestLine("POST " + RestApiRoutes.SEND_PASSWORD_RECOVERY_CODE)
     SendPassRecoveryCodeOutput sendPasswordRecoveryCode(@RequestBody SendPassRecoveryCodeInput input);
